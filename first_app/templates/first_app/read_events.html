@@ -1,0 +1,43 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+  </head>
+  <body>
+    <div class="jumbotron">
+      <marquee><h1>EVENTS ARROUD YOU!!!</h1></marquee>
+    </div>
+
+      <form class="" action="/add_events/" method="GET">
+        <center><button type="submit" class="btn btn-success">ADD EVENTS</button></center>
+      </form>
+      <br>
+
+      <table class="table table-hover">
+      <thead>
+        {% for x in data %}
+        <tr>
+          <td>
+            Event Name : {{x.Event_name}}
+            <br>
+            Event Date : {{x.Date}}
+            <br>
+            Time : {{x.Time}}
+            <br>
+            Location : {{x.Location}}
+
+          </td>
+        </tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+</div>
+
+
+    </tbody>
+  </table>
+
+    </div>
